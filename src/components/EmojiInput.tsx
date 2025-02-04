@@ -24,7 +24,7 @@ const EmojiInput: React.FC<EmojiInputProps> = ({ onSubmit }) => {
         type="text"
         value={inputUrl}
         onChange={handleChange}
-        placeholder="Enter URL..."
+        placeholder="Paste URL..."
         required
       />
       <button type="submit">Create</button>

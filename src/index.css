@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F7F9FC;
+}
+
 .emoji-explosion {
   animation: explosion 1s forwards;
-  font-size: 2rem;
+  font-size: 5rem;
   text-align: center;
 }
 
@@ -22,22 +35,33 @@
 }
 
 .App {
+  margin: 50px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
   height: 100%;
+}
+
+h1 {
+  color: #154c79;
+  font-family: "Catamaran", serif;
+  font-size: 2.5rem;
 }
 
 .url-with-emojis {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
 }
 
 input {
   padding: 8px;
-  margin-right: 10px;
   font-size: 1rem;
 }
 
@@ -46,12 +70,15 @@ button {
   font-size: 1rem;
   cursor: pointer;
   background-color: #008CBA;
+  transition: all 0.3s ease-in-out;
   color: white;
   border: none;
+  border-radius: 4px;
 }
 
 button:hover {
   background-color: #005f7f;
+  transition: all 0.3s ease-in-out;
 }
 
 button[style] {
@@ -66,9 +93,20 @@ button[style]:hover {
   margin-top: 10px;
   color: #4CAF50;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 3rem;
   text-align: center;
   animation: fadeIn 2s;
+}
+
+.emoji-url {
+  cursor: pointer;
+  text-decoration: none;
+  color: #005f7f;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.emoji-url:hover {
+  text-decoration: underline;
 }
 
 @keyframes fadeIn {
@@ -78,5 +116,19 @@ button[style]:hover {
 
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .url-with-emojis {
+    flex-direction: column;
+  }
+
+  .url-with-emojis p {
+    font-size: 14px;
+  }
+
+  .copy-message {
+    font-size: 2rem;
   }
 }

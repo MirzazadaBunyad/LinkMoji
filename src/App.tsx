@@ -9,9 +9,9 @@ const App: React.FC = () => {
   const [copySuccess, setCopySuccess] = useState<boolean>(false);
 
   const convertToEmojiUrl = (inputUrl: string): string => {
-    const emojis = ["😀", "😐", "😱"];
+    const emojis = ["😎", "🔥", "😇"];
     const emojiString = emojis.join("");
-    return `https://linkmoji.com/${emojiString}`;
+    return `https://mirzazadabunyad.github.io/${emojiString}`;
   };
 
   const handleUrlSubmit = (inputUrl: string) => {
@@ -41,7 +41,6 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <h1>LinkMoji</h1>
-      <p>URL to Emoji Formatter</p>
       <EmojiInput onSubmit={handleUrlSubmit} />
       {isAnimating ? (
         <div className="emoji-explosion">✨🔥💥</div>

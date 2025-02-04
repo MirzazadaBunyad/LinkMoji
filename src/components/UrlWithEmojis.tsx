@@ -23,7 +23,7 @@ const UrlWithEmojis: React.FC<UrlWithEmojisProps> = ({
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleClick}
-          style={{ textDecoration: "none", color: "blue" }}
+          className="emoji-url"
         >
           {emojiUrl}
         </a>
