@@ -11,7 +11,7 @@ const App: React.FC = () => {
   const convertToEmojiUrl = (inputUrl: string): string => {
     const emojis = ["😎", "🔥", "😇"];
     const emojiString = emojis.join("");
-    return `https://mirzazadabunyad.github.io/${emojiString}`;
+    return `https://linkmoji.com/${emojiString}`;
   };
 
   const handleUrlSubmit = (inputUrl: string) => {
